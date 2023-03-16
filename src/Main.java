@@ -36,6 +36,32 @@ public class Main {
             System.out.println(e);
         }
 
+        System.out.println();
+        System.out.println();
+
+        Passport passport = new Passport(12345, "Антонов", "Илья", null, "01.01.2001");
+        Passport passport2 = passport;
+        Passport passport3 = new Passport(12345, "Борисов", "Петр", null, "23.02.1998");
+
+        passport.equals(passport2);
+        passport.equals(passport3);
+        passport2.equals(passport3);
+
+        passport.addToSet();
+
+        System.out.println(Passport.passports);
+
+        passport3.addToSet();
+
+        System.out.println(Passport.passports);
+
+        passport2.addToSet();
+
+        System.out.println(Passport.passports);
+
+        System.out.println(Passport.getByNumber(12345));
+
+
 
 
 
